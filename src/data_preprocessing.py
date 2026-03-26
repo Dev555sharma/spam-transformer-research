@@ -13,7 +13,7 @@ def load_data(path="data/raw/spam.csv"):
 
     return df1
 
-def load_data(path="data/raw/emails_V2.csv"):
+def load_emails_v2(path="data/raw/emails_V2.csv"):
     # 1. Load the dataset
     df2 = pd.read_csv(path)
 
