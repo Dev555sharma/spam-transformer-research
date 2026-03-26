@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-def load_data(path=r"C:\Users\DELL\spam-transformer-research\data\raw\spam.csv"):
+def load_data(path="data/raw/spam.csv"):
     df1 = pd.read_csv(path, encoding='latin-1')
 
     # Keep only useful columns
@@ -13,7 +13,7 @@ def load_data(path=r"C:\Users\DELL\spam-transformer-research\data\raw\spam.csv")
 
     return df1
 
-def load_emails_v2(path=r'C:\Users\DELL\spam-transformer-research\data\raw\emails_V2.csv'):
+def load_data(path="data/raw/emails_V2.csv"):
     # 1. Load the dataset
     df2 = pd.read_csv(path)
 
