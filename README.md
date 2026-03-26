@@ -20,10 +20,20 @@ We simulate real-world spam obfuscation:
 - Character replacement (e → 3, o → 0)
 - Random symbol insertion
 
-## Results
-- Clean Accuracy: XX
-- Noisy Accuracy: XX
-- Robustness Drop: XX
+## 📊 Results
+
+| Metric            | Clean Data | Noisy Data |
+|------------------|-----------|------------|
+| Accuracy         | 98.9%     | 35.9%      |
+| F1 Score         | 98.1%     | 46.4%      |
+| Precision        | 97.6%     | 30.2%      |
+| Recall           | 98.5%     | 100%       |
+
+## 🚨 Key Finding
+Model performance drops by **~63% under adversarial noise**, showing that transformer models are highly sensitive to input perturbations.
+
+## 🧠 Insight
+Under noisy conditions, the model becomes biased toward predicting spam, leading to high recall but very low precision.
 
 ## Key Insight
 Transformer models perform well on clean data but show measurable degradation under adversarial perturbations, highlighting robustness limitations in real-world deployment.
