@@ -35,9 +35,6 @@ Model performance drops by **~63% under adversarial noise**, showing that transf
 ## 🧠 Insight
 Under noisy conditions, the model becomes biased toward predicting spam, leading to high recall but very low precision.
 
-## Key Insight
-Transformer models perform well on clean data but show measurable degradation under adversarial perturbations, highlighting robustness limitations in real-world deployment.
-
 ## Explainability
 We use SHAP to:
 - Identify influential words
