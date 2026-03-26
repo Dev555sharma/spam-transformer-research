@@ -10,6 +10,14 @@ def load_model():
 
 
 def predict(texts, model, tokenizer):
+    # Ensure input is always a list of strings
+    if isinstance(texts, str):
+        texts = [texts]
+    elif not isinstance(texts, list):
+        texts = list(texts)
+
+    texts = [str(t) for t in texts]
+
     inputs = tokenizer(
         texts,
         padding=True,
@@ -21,7 +29,7 @@ def predict(texts, model, tokenizer):
         outputs = model(**inputs)
         probs = torch.nn.functional.softmax(outputs.logits, dim=1)
 
-    return probs.numpy()
+    return probs.detach().cpu().numpy()
 
 
 def run_explanation():
