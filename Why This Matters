@@ -1,0 +1,2 @@
+## 🎯 Why This Project Matters
+Spam detection systems in real-world environments face adversarial manipulation (e.g., “Fr33”, “C1ick”). This project explores how modern transformer models handle such perturbations and identifies their limitations.
